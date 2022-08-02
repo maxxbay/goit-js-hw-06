@@ -1,0 +1,350 @@
+/* стили для корневого элемента слайдера */
+.customer-reviews.container {
+    width: 100%;
+
+}
+
+.customer-reviews.section {
+    padding-bottom: 0;
+}
+
+
+
+.customer__photo {
+    display: block;
+    margin: 0 auto 32px;
+}
+
+.customer-reviews__div {
+    background-color: $background-color-third;
+
+    @media screen and (min-width: 1280px) {
+        padding: 0px 123px;
+    }
+
+    @media screen and (max-width: 1279px) {
+        padding: 0px 74px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 0px 0px;
+    }
+
+
+}
+
+.customer-reviews__bgc {
+    background-color: $background-color-third;
+    display: block;
+    width: 100%;
+
+    @media screen and (min-width: 1280px) {
+        padding: 37px 106px 31px 106px;
+    }
+
+
+    @media screen and (max-width: 1279px) {
+        padding: 37px 6px 36px 6px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 33px 50px 17px 50px;
+    }
+
+}
+
+.customer-reviews__lines {
+    background-image: repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 30px,
+            #E1E1E1 30px,
+            #E1E1E1 31px);
+}
+
+.customer-reviews__text {
+    font-weight: 500;
+    padding: 10px 0 0 0;
+    margin: 0;
+
+
+
+
+
+    position: relative;
+    z-index: 2;
+
+
+    color: #000000;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 54px;
+        height: 40px;
+        background-size: contain;
+        background-image: url('../images/icon-quote.svg');
+        position: absolute;
+        top: -10px;
+        left: 7px;
+
+        z-index: -1;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+        line-height: 1.86;
+        padding: 10px 36px 0 36px;
+    }
+
+    @media screen and (max-width: 1279px) {
+        font-size: 14px;
+        line-height: 2.16;
+        padding: 10px 50px 0 50px;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 12px;
+        line-height: 2.55;
+        padding: 10px 0 0 0;
+    }
+
+}
+
+
+.customer__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+
+    @media screen and (max-width: 768px) {
+        margin: 16px 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 16px 0 32px 0;
+    }
+
+
+
+
+}
+
+.slider-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.slider__icon {
+    display: flex;
+
+
+
+
+    &.grey {
+        width: 12px;
+        height: 12px;
+        display: flex;
+        border-radius: 50%;
+        background-color: #D9D9D9;
+
+    }
+}
+
+.slider-icons__list {
+
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+
+
+.slider-icons__item {
+    display: flex;
+    justify-content: center;
+
+    &:not(:last-child) {
+        margin-right: 18px;
+    }
+}
+
+.products__points.customer-reviews {
+    background: $btn-color-2-hover;
+    text-align: center;
+    width: 4px;
+    height: 4px;
+    margin: 16px auto 16px auto;
+
+    @media screen and (max-width: 1279px) {
+        margin: 4px auto 16px auto;
+    }
+
+    @media screen and (max-width: 767px) {
+        margin: 16px auto 16px auto;
+    }
+
+    &::before {
+        background: $btn-color-2-hover;
+        width: 4px;
+        height: 4px;
+    }
+
+    &::after {
+        background: $btn-color-2-hover;
+        width: 4px;
+        height: 4px;
+    }
+}
+
+// .point__list {
+//     display: flex;
+//     justify-content: center;
+//     margin-bottom: 4px;
+// }
+
+// .point__item {
+//     display: inline-block;
+
+//     &:not(:last-child) {
+//         margin-right: 10px;
+//     }
+// }
+
+// .point__button {
+//     border: none;
+//     border-radius: 50%;
+//     background: $btn-color-2-hover;
+//     padding: 2px;
+//     display: inline-block;
+// }
+
+.slider__svg {
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* стили для wrapper */
+.slider__wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+/* стили для элемента, в котором непосредственно расположены элементы (слайды) */
+.slider__items {
+    display: flex;
+    transition: transform 0.5s ease;
+
+    counter-reset: slide;
+
+    background-color: #fff;
+}
+
+/* стили для элементов */
+.slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 280px;
+
+    counter-increment: slide;
+}
+
+/* класс для отключения transition */
+.transition-none {
+    transition: none;
+}
+
+
+/* кнопки Prev и Next */
+.slider__control {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 50px;
+    transform: translateY(-50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0.5;
+    user-select: none;
+}
+
+.slider__control_show {
+    display: flex;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.slider__control_prev {
+    left: 0;
+}
+
+.slider__control_next {
+    right: 0;
+}
+
+.slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.slider__control_prev::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_next::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* Индикаторы */
+.slider__indicators {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0 15%;
+    list-style: none;
+    user-select: none;
+}
+
+.slider__indicator {
+    flex: 0 1 auto;
+    width: 30px;
+    height: 4px;
+    margin-right: 3px;
+    margin-left: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    cursor: pointer;
+}
+
+.slider__indicator_active {
+    background-color: #fff;
+}

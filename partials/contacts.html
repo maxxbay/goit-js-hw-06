@@ -1,0 +1,184 @@
+<section class="contacts section">
+  <div class="container">
+    <h2 class="contacts-title">Contacts</h2>
+    <ul class="contacts-list">
+      <li class="contacts-items">
+        <div class="contacts-items__company">Cafe</div>
+        <div class="contacts-items__wrapper">
+          <div class="contacts-city">Chicago</div>
+          <p class="contacts-text">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </p>
+        </div>
+        <div class="contacts-items__wrapper contacts-items__wrapper--bordered">
+          <div class="contacts-days">Monday - Friday</div>
+          <div class="contacts-time">06:00 AM - 10:00 PM</div>
+          <div class="contacts-days contacts-days--indented">
+            Saturday - Sunday
+          </div>
+          <div class="contacts-time">08:00 AM - 16:00 PM</div>
+        </div>
+        <div class="contacts-items__wrapper contacts-items__wrapper--bordered">
+          <a class="contacts-links" href="tel:+61(0)383766284"
+            >+61(0) 383 766 284
+          </a>
+          <a class="contacts-links" href="#">noreply@envato.com</a>
+        </div>
+      </li>
+      <li class="contacts-items">
+        <div class="contacts-items__company contacts-items__company--restyled">
+          Foodtruck
+        </div>
+        <div class="contacts-items__wrapper">
+          <div class="contacts-city">Los Angeles</div>
+          <p class="contacts-text">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </p>
+        </div>
+        <div class="contacts-items__wrapper contacts-items__wrapper--bordered">
+          <div class="contacts-days">Monday - Friday</div>
+          <div class="contacts-time">06:00 AM - 10:00 PM</div>
+          <div class="contacts-days contacts-days--indented">
+            Saturday - Sunday
+          </div>
+          <div class="contacts-time">08:00 AM - 16:00 PM</div>
+        </div>
+        <div class="contacts-items__wrapper contacts-items__wrapper--bordered">
+          <a class="contacts-links" href="tel:+61(0)383766284"
+            >+61(0) 383 766 284
+          </a>
+          <a class="contacts-links" href="#">noreply@envato.com</a>
+        </div>
+      </li>
+      <li class="contacts-items">
+        <div class="contacts-items__company">Cafe</div>
+        <div class="contacts-items__wrapper">
+          <div class="contacts-city">New York</div>
+          <p class="contacts-text">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </p>
+        </div>
+        <div class="contacts-items__wrapper contacts-items__wrapper--bordered">
+          <div class="contacts-days">Monday - Friday</div>
+          <div class="contacts-time">06:00 AM - 10:00 PM</div>
+          <div class="contacts-days contacts-days--indented">
+            Saturday - Sunday
+          </div>
+          <div class="contacts-time">08:00 AM - 16:00 PM</div>
+        </div>
+        <div class="contacts-items__wrapper contacts-items__wrapper--bordered">
+          <a class="contacts-links" href="tel:+61(0)383766284"
+            >+61(0) 383 766 284
+          </a>
+          <a class="contacts-links" href="#">noreply@envato.com</a>
+        </div>
+      </li>
+    </ul>
+    <div class="contact-btn__wrapper">
+      <div class="btn-wrapper">
+        <button class="contact-btn" type="button">
+          Our Locations
+          <svg class="contact-btn__icon" width="10" height="10">
+            <use href="./images/icons.svg#icon-for-contacts-btn"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="btn-wrapper">
+        <button
+          class="contact-btn contact-btn--modified"
+          type="button"
+          data-modal-contacts-open
+        >
+          Franchise
+          <svg class="contact-btn__icon" width="10" height="10">
+            <use href="./images/icons.svg#icon-Vector-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="contacts-backdrop contacts-backdrop--hidden" data-contacts-modal>
+    <div class="contacts-modal">
+      <button
+        class="contacts-modal__button"
+        type="button"
+        data-modal-contacts-close
+      >
+        <svg width="11" height="11">
+          <use href="./images/icons.svg#icon-close-contacts"></use>
+        </svg>
+      </button>
+      <form class="callback-form">
+        <strong class="callback-form__title"
+          >Leave your contacts and we will call you back</strong
+        >
+        <label class="callback-form__lable" for="name">Name</label>
+        <div class="callback-form__field">
+          <input
+            class="callback-form__input"
+            type="text"
+            name="name"
+            id="name"
+            required
+          />
+          <svg class="callback-form__input-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-person-callback-form"></use>
+          </svg>
+        </div>
+        <label class="callback-form__lable" for="tel">Phone</label>
+        <div class="callback-form__field">
+          <input
+            class="callback-form__input"
+            type="tel"
+            name="tel"
+            id="tel"
+            required
+          />
+          <svg class="callback-form__input-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-phone-callback-form"></use>
+          </svg>
+        </div>
+        <label class="callback-form__lable" for="email">Email</label>
+        <div class="callback-form__field">
+          <input
+            class="callback-form__input"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+          <svg class="callback-form__input-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-email-callback-form"></use>
+          </svg>
+        </div>
+        <label class="callback-form__lable" for="comment">Comment</label>
+        <textarea
+          class="callback-form__comment"
+          name="comment"
+          id="comment"
+          placeholder="Type here"
+          required
+        ></textarea>
+        <label class="callback-form__checkbox">
+          <input
+            class="callback-form__checkbox-input checkbox-hidden"
+            type="checkbox"
+            name="arragement"
+            tabindex="-1"
+            required
+          />
+          <span class="callback-form__checkbox-icon" tabindex="0">
+            <svg width="12" height="12">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+          </span>
+          <span class="callback-form__agreement-text">
+            I accept the terms and conditions of the
+            <a class="callback-form__agreement-link" href="#">Privacy Policy</a>
+          </span>
+        </label>
+        <button class="callback-form__button" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
